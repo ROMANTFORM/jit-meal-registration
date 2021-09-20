@@ -1,0 +1,131 @@
+.header {
+  max-width: 100%;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 1920px;
+  padding: 1.4rem 10rem 8.5rem 10rem;
+}
+.burger__menu {
+  display: none;
+  opacity: 0;
+}
+.logo {
+  background-image: url("../images/Logo\ \(1\).png");
+  background-size: contain;
+  width: 7.8rem;
+  height: 2.4rem;
+}
+.header__menu {
+  width: 58rem;
+}
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.btn-container {
+  width: 8rem;
+  height: 2.2rem;
+}
+.menu__btn {
+  background-color: #30a000;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+}
+.burger__icon {
+  display: none;
+  position: relative;
+  width: 1.1rem;
+  height: 0.8rem;
+}
+.burger__icon span,
+.burger__icon::before,
+.burger__icon::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #404040;
+}
+.burger__icon::before,
+.burger__icon::after {
+  content: "";
+}
+.burger__icon span {
+  top: 43%;
+}
+.burger__icon::before {
+  top: 0;
+}
+.burger__icon::after {
+  bottom: 0;
+}
+.lang {
+  color: #c0c0c0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  text-decoration: none;
+}
+.lang._active {
+  color: #404040;
+}
+.item__rus {
+  margin-left: 2rem;
+}
+.item__urk {
+  margin-left: 0.8rem;
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .header__wrapper {
+    max-width: 360px;
+    padding: 1rem 1rem 3rem 1rem;
+  }
+  .header__menu {
+    display: none;
+  }
+  .burger__icon {
+    display: block;
+  }
+  .burger__menu {
+    padding: 1rem;
+  }
+  .burger__menu li {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .btn-container {
+    margin: 0 auto;
+    padding: 0;
+    width: 8rem;
+    height: 2.2rem;
+  }
+  .item__rus,
+  .item__urk {
+    margin: 0;
+  }
+
+  .burger__icon._active span {
+    transform: scale(0);
+  }
+  .burger__icon._active::before {
+    top: 48%;
+    transform: rotate(45deg) translate(0, -50%);
+  }
+  .burger__icon._active::after {
+    bottom: 48%;
+    transform: rotate(-45deg) translate(0, 50%);
+  }
+  .burger__menu._active {
+    display: block;
+    opacity: 1;
+    transition: all 300ms linear;
+  }
+}

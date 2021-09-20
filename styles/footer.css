@@ -1,0 +1,77 @@
+.footer {
+  width: 100%;
+  background-color: #404040;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6rem 10rem 6rem 10rem;
+}
+.block__copyright {
+  width: 15rem;
+}
+.block__copyright p {
+  color: #fff;
+  font-family: PT Sans;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  padding-bottom: 0.7rem;
+}
+.copyrigth__link {
+  color: #fff;
+  font-family: PT Sans;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+.block__contacts {
+  width: 65rem;
+}
+.block__contacts p {
+  color: #fff;
+  font-family: PT Sans;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 0.8rem;
+}
+.block__socials {
+  width: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon__fb {
+  background-image: url("../images/social-icons/fb.svg");
+}
+.icon__yt {
+  background-image: url("../images/social-icons/Subtract.svg");
+}
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .footer__wrapper {
+    display: block;
+    padding: 3rem 1rem 3rem 1rem;
+  }
+  .block__copyright,
+  .block__contacts,
+  .block__socials {
+    padding-bottom: 2rem;
+  }
+  .block__copyright p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .block__contacts {
+    width: 15rem;
+  }
+}
